@@ -4,6 +4,8 @@ const { db } = require('./db/models')
 const { usersRoute } = require('./routes/users')
 const { postsRoute } = require('./routes/posts')
 
+const PORT = process.env.PORT || 4444;
+
 const app = express()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
@@ -14,8 +16,8 @@ app.use('/', express.static(__dirname + '/public'))
 
 db.sync()
   .then(() => {
-    app.listen(8383, () => {
-      console.log('server started on http://localhost:8383')
+    app.listen(PORT, () => {
+      console.log('server started on http://localhost:4444')
     })
   })
   .catch((err) => {

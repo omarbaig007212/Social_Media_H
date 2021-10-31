@@ -1,10 +1,11 @@
 const Sequelize = require('sequelize')
 
-const db = new Sequelize({
+const db=new sequelize({
     dialect: 'mysql',
-    database: 'cbsocialmediadb',
-    username: 'cbsocialuser',
-    password: 'cbsocialpass',
+    database: '5ZC8zQHPP5',
+    username: '5ZC8zQHPP5',
+    password: 'irln7q81ee',
+    host: 'remotemysql.com'
 })
 
 const COL_ID_DEF = {
